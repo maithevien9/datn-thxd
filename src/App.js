@@ -86,11 +86,11 @@ function App() {
 
   const handeFindK = (zj, AREA) => {
     var result = 0;
-    RESULT_K.map((item, index) => {
+    for (let index = 0; index < RESULT_K.length; index++) {
       if (RESULT_K[index].height <= zj && RESULT_K[index + 1].height >= zj) {
         result = (RESULT_K[index][AREA] * zj) / RESULT_K[index].height;
       }
-    });
+    }
 
     return result;
   };
@@ -107,7 +107,7 @@ function App() {
           onFinish={handleResult}
         >
           <Form.Item label='Tỉnh thành phố' name='city'>
-            <Select style={{ width: 120 }} style={{ width: 700 }}>
+            <Select style={{ width: 700 }}>
               {Object.values(CITY).map((city, index) => (
                 <Option value={city.KEY} key={index}>
                   {city.CITY} - {city.DETAIL}
