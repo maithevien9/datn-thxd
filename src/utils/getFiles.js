@@ -1,0 +1,15 @@
+import { GoogleSpreadsheet } from 'google-spreadsheet';
+
+const getFiles = async () => {
+  const doc = new GoogleSpreadsheet('10fXmQhnZL2Q5XIzxbZIMqCUFsn629EhlTUTADVAe84E');
+  await doc.useServiceAccountAuth({
+    client_email: 'coral-automation@coral-automation.iam.gserviceaccount.com',
+    private_key:
+      '-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDGvoG0ZgeMRxXY\nVU66Fi1kHKXkUX5ILkKqlcB8Owrp6w71T7K1QDr/5s9XUjzWUbU+Z0O7/zFdgMFa\n4Qw+DhsFldXdd3NeKgl4/zVGUJkQ7zmwyvrRPolxi/s2miVeO7t8s8RpXj/oB9O9\n9sCBSMmOy9liJG9L6KkmFfTza7wedKHVi0LEg4sVIVLCj62B5KFeTm6m94qz3bjH\n61KJ3Dghbi6yPhFem23rhQz7L5IjHrnn43uMXXaJVQHg/N7NDpK0wLN8nNFHc0cS\nzpy/m/fwb4sWrhYLP06X7kChOXKarCuClPMZbCYfdnvjsV2ixbos1OeVeNqdGPgl\n+fXBUou/AgMBAAECggEACAzGVya8zodAkMMfzbTBQOlSJNXSLh1FkQBAzCdeEUx2\njiQcwm+oFB5mroxDr5CerTjkivRSrQ1eh45O/yJ2ILtJbs98Skecm5yGrWLtWDzA\nUvNdxmToj0NSuQr0UYVM2kezwGrTXtQWVP7uHC51D4YdN3bvVR1G4KaKBeQKuhb/\n6DnxlQqdD6qhdCWgjguBiOPJLHfSDI0F1gLpunXFQtz1lo24LYcdakN4P7IKlxS6\n3TWgw3Cy/wsAiYnsHvXASR27hst7D2LJt3kB9K9Jcc/QfEktCh/NJXn20ORAMmjf\nsTyNFY+fhqrurVTmMggo4zMsi8jfc8zPix84JSHNAQKBgQD7K9kOaJEiM6jb3cmb\nSWLT3UzF43ir7vwC1eJHIGc2p01AsJoywM1+7WoJMNEYtreTelQlmmt19jnRKQqk\nqUyPkbu+ePDzv05fXoX77pya3n/eUCS6IvM5rgCyECoyFKU1H0QyP6DYUxxb569u\n8bXLWHUYPbACAEakEqdoN7FPAQKBgQDKkKLXP24Vh5HpuhdZwzrpYpjSpHFFP71E\nbqj3mxNWw+6kFXojEKLg7JCGmG7wIRnDJhk/Xx53m0FryLsMSzbTXRMSYK/hsQyj\n+mwTqGvMQYEgQLXiBsme2CweRrKpPe509G8mMsnM+X1v3AfDr6Et6jZEz5IkTSMD\n/RFVbIKavwKBgQDcJ57lxjoQZH+J2GkyN6zsT3lPqwbGjX9PbPIdrgVKHnLUVPeT\nrPNyYd8jlypwIxfdqMfA/g1bJCuhbfvqQIre/Lo3RgLNY83qQgvmu0uBY61oy46l\nqKTQ1fe+G/UgWIBGg9Vexe7SLmcZF4bqE+tpBWv9h3STDHLetYsPCmHcAQKBgF4s\n0lhqV/7QcakNaG/GEWyR92TvKO4+DPt0yz+arGoJW7iTd543zNHvid3ZnrIrYXPW\nEaThzyNiXg8DWtsDWPD5c7V2mC7AhpTyBy84fS2QQr1A+I6mAzTDYfeNfOCsN2HO\nhqJmuGWAlK3dyQpUbAYRvrtNGa+g4Seoj1d8xFe3AoGBAOlYCpHWDGFaZV//ilKR\nUEePvwXPM+sCROIxvMCkXkQX4V/+1wtSmxlCYLAMiKdfcX9J8XHVQRIk1elqVKp0\n4YhJ9SuPly300nTttDaNmknxr0h4cwOzB6oV5ta53WpknBvKMW9kvPwcs765PDDf\nC5e+YlsgW3kZkeTFjinUwQO3\n-----END PRIVATE KEY-----\n',
+  });
+
+  await doc.loadInfo();
+  return doc;
+};
+
+export default getFiles;
