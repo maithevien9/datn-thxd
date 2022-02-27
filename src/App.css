@@ -49,3 +49,11 @@
 .table-container {
   padding: 10px 310px;
 }
+
+.wind-container {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}

@@ -60,7 +60,7 @@ const RESULT = [
     C: 1.18,
   },
   {
-    height: 100,
+    height: 1100,
     A: 1.62,
     B: 1.51,
     C: 1.25,
